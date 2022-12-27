@@ -1,10 +1,7 @@
 package InMemoryModel;
 
-public class IModelChangedObserver {
+public interface IModelChangedObserver {
 
     
-    public void ApplyUpdateModel(){
-
-        System.out.println("Model changed");
-    }
+    public void ApplyUpdateModel();
 }
