@@ -6,6 +6,12 @@ public class Triangle extends BaseElements {
     private double c;
     
     public Triangle(double a, double b, double c){
+        if (a <= 0 || b <=0 || c<=0){
+            throw new RuntimeException("Нельзя создать треугольник, у которого хотя бы одна из сторон меньше или равна 0");
+        }
+        if (a +b <= c || b + c <=a || a + c<=b){
+            throw new RuntimeException("Невозможно создать треугольник с заданными сторонами");
+        }
         super.setType("triangle");
         super.setSize(a);
         this.b = b;

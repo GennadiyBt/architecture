@@ -3,6 +3,9 @@ package Shape.Elements;
 public class Square extends BaseElements{
     
     public Square(double a){
+        if (a <= 0){
+            throw new RuntimeException("Нельзя создать квадрат со стороной меньше или равной 0");
+         }
         super.setType("square");
         super.setSize(a);
     }

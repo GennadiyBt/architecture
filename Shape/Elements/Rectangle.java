@@ -5,6 +5,9 @@ public class Rectangle extends BaseElements {
     private double b;
 
     public Rectangle(double a, double b){
+        if (a <= 0 || b <=0){
+            throw new RuntimeException("Нельзя создать прямоугольник, у которого хотя бы одна из сторон меньше или равна 0");
+         }
         super.setType("rectangle");
         super.setSize(a);
         this.b = b;

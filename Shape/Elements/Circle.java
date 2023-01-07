@@ -3,6 +3,9 @@ package Shape.Elements;
 public class Circle extends BaseElements{
 
     public Circle(double radius){
+        if (radius <= 0){
+           throw new RuntimeException("Нельзя создать круг с радиусом меньше или равным 0");
+        }
         super.setType("circle");
         super.setSize(radius);
     }
